@@ -5,20 +5,20 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class OrderItem {
+public class LineOrderItem {
 	@Id
 	private Long id;
 	@ManyToOne
-	private Order order;
+	private LineOrder order;
 	private Double quantity;
 	@ManyToOne
 	private Item item;
 
-	public Order getOrder() {
+	public LineOrder getOrder() {
 		return order;
 	}
 
-	public void setOrder(Order order) {
+	public void setOrder(LineOrder order) {
 		this.order = order;
 	}
 

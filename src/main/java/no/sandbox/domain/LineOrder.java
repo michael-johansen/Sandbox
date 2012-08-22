@@ -9,14 +9,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Order {
+public class LineOrder {
 	@Id
 	private Long id;
 	@ManyToOne
 	private Customer customer;
 	private Date orderedDate;
 	@OneToMany
-	private Set<OrderItem> orderItems;
+	private Set<LineOrderItem> orderItems;
 
 	public Customer getCustomer() {
 		return customer;
@@ -38,11 +38,11 @@ public class Order {
 		return id;
 	}
 
-	public Set<OrderItem> getOrderItems() {
+	public Set<LineOrderItem> getOrderItems() {
 		return orderItems;
 	}
 
-	public void setOrderItems(Set<OrderItem> orderItems) {
+	public void setOrderItems(Set<LineOrderItem> orderItems) {
 		this.orderItems = orderItems;
 	}
 }
